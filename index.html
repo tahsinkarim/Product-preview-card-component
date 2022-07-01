@@ -33,27 +33,41 @@
   </head>
   <body class="bg-cream-bg">
     <main class="h-screen w-screen bg-cream-bg font-body">
-      <div class="mx-8 my-8">
+      <div
+        class="mx-8 my-8 md:w-[800px] md:absolute md:transform top-[50%] left-[50%] md:translate-y-[-50%] md:translate-x-[-50%]"
+      >
         <div
-          class="flex flex-col justify-center items-center rounded-xl bg-white"
+          class="flex flex-col md:flex-row justify-center items-center rounded-xl bg-white"
         >
-          <div>
-            <img
-              class="rounded-t-xl"
-              src="./images/image-product-mobile.jpg"
-              alt="product"
-            />
+          <div class="flex-auto">
+            <picture>
+              <source
+                media="(min-width: 769px)"
+                srcset="./images/image-product-desktop.jpg"
+              />
+              <source
+                media="(min-width: 300px)"
+                srcset="./images/image-product-mobile.jpg"
+              />
+              <img
+                class="rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
+                src="./images/image-product-mobile.jpg"
+                alt="Product"
+              />
+            </picture>
           </div>
-          <div class="mx-6 my-6">
-            <h2 class="text-xs text-gray-blue tracking-[3px]">PERFUME</h2>
-            <h1 class="font-head text-3xl my-4">
+          <div class="mx-6 my-6 flex-auto md:w-[500px] md:px-3">
+            <h2 class="text-xs text-gray-blue tracking-[3px] md:pb-4">
+              PERFUME
+            </h2>
+            <h1 class="font-head text-3xl md:text-4xl my-4 md:pb-4 md:pr-5">
               Gabrielle Essence Eau De Perfume
             </h1>
             <p class="text-s text-gray-blue mb-12">
               A floral, solar and voluptupou interpretation composed by Oliver
               Polge, Perfumer-Creator for the house of CHANEL.
             </p>
-            <div class="flex flex-row items-center">
+            <div class="flex flex-row items-center md:mb-16">
               <p class="text-3xl font-head text-dark-cyan">$149.99</p>
               <p class="text-gray-blue line-through ml-4">$169.99</p>
             </div>
